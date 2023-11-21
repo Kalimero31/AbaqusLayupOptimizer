@@ -2,7 +2,7 @@ import abaqus
 import abaqusConstants
 import matplotlib.pyplot as plt
 
-import odb_field_extractor as odbFE
+import AbaqusLayupOptimizer.odb_field_extractor as odbFE
 
 # Il faut coder de nouvelles fonctions objectives qui mettent en place les criteres de tsai-wu/hi
 
