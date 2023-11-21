@@ -19,6 +19,9 @@ def objective_function_2022_1(odb):
 
     return(val)
 
+def objective_function_2023(odb):
+    pass
+    # On veut le max de displacement
 if __name__ == "__main__":
 
 # Exemple : Calcul de la fonction objective pour une odb existante.

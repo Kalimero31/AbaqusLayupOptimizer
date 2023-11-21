@@ -3,9 +3,11 @@ import abaqusConstants
 import matplotlib.pyplot as plt
 
 USEFUL_ATTRIBUTES = {'U' : 'magnitude',
-                     'STH' : 'data'}
+                     'STH' : 'data',
+                     'HSNFTCRT': "data"}
 
 def get_output_last_frame(odb):
+    print(odb.steps.values())
     last_step = odb.steps.values()[-1]
     last_frame = last_step.frames[-1]
     return(last_frame.fieldOutputs)
@@ -23,8 +25,11 @@ def get_field_data(odb, field_name):
 if __name__ == "__main__":
 
 # Exemple : Recuperation du deplacement
-    odb_name = "Job_test_vizu_4.odb"
+
+    odb_name = "C://temp/test_hashin.odb"
+
     my_odb = abaqus.session.openOdb(name=odb_name)
+
     data = get_field_data(my_odb, 'U')
     
     print(min(data))
