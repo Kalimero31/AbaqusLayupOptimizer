@@ -14,46 +14,18 @@ import matplotlib.pyplot as plt
 import objective_functions as objFuncs
 import odb_field_extractor as odbFE
 
-# Liens entre modele et parts de notre .cae
-versions = [('1_plaque_plane', 'plaque_plane'),
-            ('2_plaque_plane', 'plaque_plane'),
-            ('3_tube', 'tube')]
-
-
-
-#      Informations
-
-k = 2
-model_name = versions[k][0]
-part_name = versions[k][1]
-
-
-#   Retrieving useful objets
-
-models = abaqus.mdb.models
-my_model = models[model_name]
-my_part = my_model.parts[part_name]
-my_material = 'composite'
-
-
-# faces = my_part.faces.getSequenceFromMask(mask=('[#1 ]', ), )
-# print(my_part.sets)
-
-composite_layup = my_part.compositeLayups['CompositeLayup']
-region = my_part.sets['Set-1']
-
 # del my_part.compositeLayups['CompositeLayup']
 
 # Effectue la stratification a un composite layup
 def make_stratification(composite_layup, region, material, 
-                        layer_orientations, layer_thicknesses):
+                        layers):
     
     # On supprime les plis existants
     composite_layup.deletePlies()
     composite_layup.resume()
     
     # Itere sur la longueur de la liste des orientations
-    for i in range(len(layer_orientations)):
+    for i in range(len(layers)):
 
         # Ajoute un pli avec epaisseur variable
         composite_layup.CompositePly(suppressed = False, 
@@ -61,9 +33,9 @@ def make_stratification(composite_layup, region, material,
                                     region = region,
                                     material = material, 
                                     thicknessType = abaqusConstants.SPECIFY_THICKNESS, 
-                                    thickness = layer_thicknesses[i], 
+                                    thickness = 0.25, #mm
                                     orientationType = abaqusConstants.SPECIFY_ORIENT, 
-                                    orientationValue = layer_orientations[i], 
+                                    orientationValue = layers[i], 
                                     additionalRotationType = abaqusConstants.ROTATION_NONE, 
                                     additionalRotationField = '', 
                                     axis = abaqusConstants.AXIS_3, 
@@ -71,10 +43,10 @@ def make_stratification(composite_layup, region, material,
                                     numIntPoints=3)
         
 # Lance un job, gere les fichiers inutiles
-def submit_job(job_name):
+def submit_job(job_name, model):
     # Creating the job
     abaqus.mdb.Job(name = job_name, 
-                   model = my_model, 
+                   model = model, 
                    description = '', 
                    type = abaqusConstants.ANALYSIS, 
                    atTime = None, 
