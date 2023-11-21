@@ -95,12 +95,6 @@ def move_data_file(job_name):
             new_file_location = os.path.join(path_to_new_directory, os.path.basename(i))
             shutil.move(i, new_file_location)
 
-# make_stratification(composite_layup, region, my_material,
-#                     [0, 45, 90],
-#                     [0.4, 0.2, 0.7]
-#                     )
-
-
 # k = 4
 # submit_job('Job_test_vizu_' + str(k))
 
