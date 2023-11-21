@@ -7,7 +7,7 @@ import abaqus
 import abaqus_utils as abaqus_utils 
 import odb_field_extractor as odb_field_extractor 
 
-MyDOE = np.load("plan_of_experience_1000.npy")
+MyDOE = np.load("C://temp/AbaqusLayupOptimizer/plan_of_experience_1000.npy")
 
 # Liens entre modele et parts de notre .cae
 versions = [('1_plaque_plane', 'plaque_plane'),
