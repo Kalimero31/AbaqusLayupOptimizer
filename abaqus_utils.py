@@ -1,3 +1,6 @@
+import sys
+sys.path.append('C://temp/AbaqusLayupOptimizer')
+
 import abaqus
 import abaqusConstants
 import caeModules
@@ -11,8 +14,8 @@ import shutil
 import numpy as np
 import matplotlib.pyplot as plt
 
-import AbaqusLayupOptimizer.objective_functions as objFuncs
-import AbaqusLayupOptimizer.odb_field_extractor as odbFE
+import objective_functions as objFuncs
+import odb_field_extractor as odbFE
 
 # del my_part.compositeLayups['CompositeLayup']
 

@@ -1,8 +1,11 @@
+import sys
+sys.path.append('C://temp/AbaqusLayupOptimizer')
+
 import numpy as np
 import abaqus
 
-import AbaqusLayupOptimizer.abaqus_utils as abaqus_utils 
-import AbaqusLayupOptimizer.odb_field_extractor as odb_field_extractor 
+import abaqus_utils as abaqus_utils 
+import odb_field_extractor as odb_field_extractor 
 
 MyDOE = np.load("plan_of_experience_1000.npy")
 

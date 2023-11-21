@@ -1,8 +1,11 @@
+import sys
+sys.path.append('C://temp/AbaqusLayupOptimizer')
+
 import abaqus
 import abaqusConstants
 import matplotlib.pyplot as plt
 
-import AbaqusLayupOptimizer.odb_field_extractor as odbFE
+import odb_field_extractor as odbFE
 
 # Il faut coder de nouvelles fonctions objectives qui mettent en place les criteres de tsai-wu/hi
 
