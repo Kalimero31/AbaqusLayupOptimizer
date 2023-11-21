@@ -30,10 +30,12 @@ if __name__ == "__main__":
 
     my_odb = abaqus.session.openOdb(name=odb_name)
 
+    print(get_available_fields(my_odb))
+
     data = get_field_data(my_odb, 'U')
     
     print(min(data))
     print(max(data))
 
-    plt.plot(data)
-    plt.show()
+    # plt.plot(data)
+    # plt.show()
