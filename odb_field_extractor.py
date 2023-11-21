@@ -32,7 +32,7 @@ if __name__ == "__main__":
 
     print(get_available_fields(my_odb))
 
-    data = get_field_data(my_odb, 'U')
+    data = get_field_data(my_odb, 'HSNFTCRT')
     
     print(min(data))
     print(max(data))
