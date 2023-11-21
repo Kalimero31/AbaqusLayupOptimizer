@@ -26,7 +26,7 @@ if __name__ == "__main__":
 
 # Exemple : Recuperation du deplacement
 
-    odb_name = "C://temp/test_hashin.odb"
+    odb_name = "C://temp/Job-6.odb"
 
     my_odb = abaqus.session.openOdb(name=odb_name)
 
