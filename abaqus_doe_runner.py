@@ -42,6 +42,6 @@ for i in range(1):
     print(str(i))
     strat_exemple = MyDOE[0]
     abaqus_utils.make_stratification(composite_layup, region, my_material, strat_exemple)
-    abaqus_utils.submit_job(my_model, "job_automated_"+ str(i))
+    abaqus_utils.submit_job("job_automated_"+ str(i), my_model)
 
 
