@@ -4,7 +4,10 @@ import matplotlib.pyplot as plt
 
 USEFUL_ATTRIBUTES = {'U' : 'magnitude',
                      'STH' : 'data',
-                     'HSNFTCRT': "data"}
+                     'HSNFCCRT': "data",
+                     'HSNFTCRT': "data",
+                     'HSNMTCRT': "data",
+                     'HSNMCCRT': "data",}
 
 def get_output_last_frame(odb):
     print(odb.steps.values())
@@ -32,10 +35,12 @@ if __name__ == "__main__":
 
     print(get_available_fields(my_odb))
 
-    data = get_field_data(my_odb, 'HSNFTCRT')
+    data1 = max(get_field_data(my_odb, 'HSNFCCRT'))
+    data2 = max(get_field_data(my_odb, 'HSNFTCRT'))
+    data3 = max(get_field_data(my_odb, 'HSNMTCRT'))
+    data4 = max(get_field_data(my_odb, 'HSNMCCRT'))
     
-    print(min(data))
-    print(max(data))
+    print(max(data1, data2, data3, data4))
 
     # plt.plot(data)
     # plt.show()
