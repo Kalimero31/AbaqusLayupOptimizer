@@ -1,4 +1,8 @@
 import sys
+
+# Le path de python certaines distrib abaqus a l'air de ne pas contenir 
+# le dossier qui contient le script en train d'être executé... 
+# donc on l'ajoute manuellement.
 sys.path.append('C://temp/AbaqusLayupOptimizer')
 
 import abaqus
@@ -19,9 +23,20 @@ def objective_function_2022_1(odb):
 
     return(val)
 
-def objective_function_2023(odb):
+def hashin(odb):
+    hashin_indexes = ['HSNFCCRT', 'HSNFTCRT', 'HSNMTCRT', 'HSNMCCRT']
+    hashin_max_values = [max(odbFE.get_field_data(my_odb, i)) for i in hashin_indexes]
+
+    max_failure = max(hashin_max_values)
+    displacement = odbFE.get_field_data(odb, 'U')
+
+    return(max_failure, displacement)
+
+def objective_function_complete_failure(odb):
+    # Une fonction qui prend en considération la répartition des maximums de contrainte/failure. 
+    # Car on préfere avoir du 1 quelque part plutôt que du 0.9 partout (par exemple).
     pass
-    # On veut le max de displacement
+
 if __name__ == "__main__":
 
 # Exemple : Calcul de la fonction objective pour une odb existante.
