@@ -28,9 +28,9 @@ def hashin(odb):
     hashin_max_values = [max(odbFE.get_field_data(odb, i)) for i in hashin_indexes]
 
     max_failure = max(hashin_max_values)
-    displacement = odbFE.get_field_data(odb, 'U')
+    max_displacement = max(odbFE.get_field_data(odb, 'U'))
 
-    return([max_failure, displacement])
+    return([max_failure, max_displacement])
 
 def objective_function_complete_failure(odb):
     # Une fonction qui prend en consideration la repartition des maximums de contrainte/failure. 

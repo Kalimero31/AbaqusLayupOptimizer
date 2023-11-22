@@ -12,8 +12,8 @@ import neural_network
 
 # Creation du dataframe
 
-input_array = np.load('design_of_experience_1000.npy')
-output_array = np.load('results_of_doe_1000.npy')
+input_array = np.load('C://temp/2020-1214/AbaqusLayupOptimizer/design_of_doe_mardi_2')
+output_array = np.load('C://temp/2020-1214/AbaqusLayupOptimizer/results_of_doe_mardi_2')
 
 # Choix des labels d'entrée et de sortie
 
@@ -44,6 +44,6 @@ neural_network.train(X_train, Y_train, X_test, Y_test, epochs=200, batch_size=20
 loss = neural_network.evaluate(X_test, Y_test)
 
 # Sauvegarde du modèle entrainé
-neural_network.save('PredictionModel.h5')
+neural_network.save('C://temp/2020-1214/AbaqusLayupOptimizer/PredictionModel_mardi.h5')
 
 # Voir le fichier demo_use_neural_network.py pour l'utilisation d'un modèle enregistré.

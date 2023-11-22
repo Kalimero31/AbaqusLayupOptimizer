@@ -48,14 +48,14 @@ t = time.time()
 
 # Boucle principale de calcul sur tous les elements du DOE
 # for i in range(len(MyDOE)):
-for i in range(0,334):
-    strat_exemple = MyDOE[i]
+for i in range(117,335):
+    strat_exemple = MyDOE[i+117]
     abaqus_utils.make_stratification(composite_layup, region, my_material, strat_exemple)
-    abaqus_utils.submit_job("job_automated_"+ str(i), my_model)
+    abaqus_utils.submit_job("job_automated_"+ str(i+117), my_model)
 
     # Affichage du temps pour chaque essai
     t1 = time.time()
-    print('Essai ', str(i) , ' : ' , {str(t1-t)} , ' s')
+    print('Essai ', str(i+117) , ' : ' , {str(t1-t)} , ' s')
     t = t1
 
 

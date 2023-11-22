@@ -6,7 +6,7 @@ from tensorflow.keras.models import load_model
 import numpy as np
 
 # Nom du modèle 
-filename = "PredictionModel.h5"
+filename = "C://temp/2020-1214/AbaqusLayupOptimizer/PredictionModel_mardi.h5"
 
 # Chargement du modèle
 model = load_model(filename)
