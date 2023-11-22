@@ -16,7 +16,7 @@ import odb_field_extractor as odb_field_extractor
 # Ce plan d'experience a ete genere par le script doe_generator.py
 # Il contient une liste de combinaisons de 9 parametres.
 # Exemple: [[0,0,0,45,45,45,90,90,90], etc...]
-MyDOE = np.load("C://temp/2020-1214/AbaqusLayupOptimizer/design_of_experience_1000.npy")
+MyDOE = np.load("C://temp/2020-1214/AbaqusLayupOptimizer/design_of_experience_2000.npy")
 
 # Liens entre modele et parts de notre .cae
 versions = [('1_plaque_plane', 'plaque_plane'),
@@ -48,8 +48,8 @@ t = time.time()
 
 # Boucle principale de calcul sur tous les elements du DOE
 # for i in range(len(MyDOE)):
-for i in range(2):
-    strat_exemple = MyDOE[0]
+for i in range(0,334):
+    strat_exemple = MyDOE[i]
     abaqus_utils.make_stratification(composite_layup, region, my_material, strat_exemple)
     abaqus_utils.submit_job("job_automated_"+ str(i), my_model)
 

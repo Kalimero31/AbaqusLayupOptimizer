@@ -25,12 +25,12 @@ def objective_function_2022_1(odb):
 
 def hashin(odb):
     hashin_indexes = ['HSNFCCRT', 'HSNFTCRT', 'HSNMTCRT', 'HSNMCCRT']
-    hashin_max_values = [max(odbFE.get_field_data(my_odb, i)) for i in hashin_indexes]
+    hashin_max_values = [max(odbFE.get_field_data(odb, i)) for i in hashin_indexes]
 
     max_failure = max(hashin_max_values)
     displacement = odbFE.get_field_data(odb, 'U')
 
-    return(max_failure, displacement)
+    return([max_failure, displacement])
 
 def objective_function_complete_failure(odb):
     # Une fonction qui prend en consideration la repartition des maximums de contrainte/failure. 

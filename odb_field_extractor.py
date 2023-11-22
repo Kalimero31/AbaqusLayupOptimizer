@@ -10,7 +10,7 @@ USEFUL_ATTRIBUTES = {'U' : 'magnitude',
                      'HSNMCCRT': "data",}
 
 def get_output_last_frame(odb):
-    print(odb.steps.values())
+    #print(odb.steps.values())
     last_step = odb.steps.values()[-1]
     last_frame = last_step.frames[-1]
     return(last_frame.fieldOutputs)
