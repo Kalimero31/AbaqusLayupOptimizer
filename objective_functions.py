@@ -1,9 +1,9 @@
 import sys
 
 # Le path de python certaines distrib abaqus a l'air de ne pas contenir 
-# le dossier qui contient le script en train d'être executé... 
+# le dossier qui contient le script en train d'etre execute... 
 # donc on l'ajoute manuellement.
-sys.path.append('C://temp/AbaqusLayupOptimizer')
+sys.path.append('C://temp/2020-1214/AbaqusLayupOptimizer')
 
 import abaqus
 import abaqusConstants
@@ -33,8 +33,8 @@ def hashin(odb):
     return(max_failure, displacement)
 
 def objective_function_complete_failure(odb):
-    # Une fonction qui prend en considération la répartition des maximums de contrainte/failure. 
-    # Car on préfere avoir du 1 quelque part plutôt que du 0.9 partout (par exemple).
+    # Une fonction qui prend en consideration la repartition des maximums de contrainte/failure. 
+    # Car on prefere avoir du 1 quelque part plutot que du 0.9 partout (par exemple).
     pass
 
 if __name__ == "__main__":

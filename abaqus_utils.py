@@ -1,5 +1,5 @@
 import sys
-sys.path.append('C://temp/AbaqusLayupOptimizer')
+sys.path.append('C://temp/2020-1214/AbaqusLayupOptimizer')
 
 import abaqus
 import abaqusConstants
