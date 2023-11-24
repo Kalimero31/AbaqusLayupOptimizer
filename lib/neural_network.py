@@ -13,8 +13,9 @@ class NeuralNetwork:
 
     def _build_model(self):
         model = Sequential()
-        model.add(Dense(32, input_dim=self.input_dim, activation='relu'))
-        model.add(Dense(32, activation='relu'))
+        model.add(Dense(64, input_dim=self.input_dim, activation='relu'))
+        model.add(Dense(64, activation='relu'))
+        model.add(Dense(64, activation='relu'))
         model.add(Dense(self.output_dim, activation='linear'))
         model.compile(loss='mean_squared_error', optimizer='adam')
         return model

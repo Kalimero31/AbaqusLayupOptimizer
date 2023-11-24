@@ -5,7 +5,6 @@ import matplotlib.pyplot as plt
 import abaqus
 import abaqusConstants
 
-print("new_version")
 # Le path de python certaines distrib abaqus a l'air de ne pas contenir 
 # le dossier qui contient le script en train d'etre execute... 
 # Donc on l'ajoute manuellement.
