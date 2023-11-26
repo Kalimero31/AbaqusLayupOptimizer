@@ -10,7 +10,7 @@ plt.hist(U, bins=25)
 print(U)
 
 
-plt.hist(U, bins=25)  # Tu peux ajuster le nombre de 'bins' selon le besoin
+plt.hist(U, bins=25)
 plt.title('Histogramme des données')
 plt.xlabel('Valeurs')
 plt.ylabel('Fréquence')

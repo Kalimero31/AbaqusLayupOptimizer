@@ -9,7 +9,7 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MinMaxScaler
 
-import lib.neural_network as neural_network
+import src.neural_network as neural_network
 
 
 # Choix des labels d'entrée et de sortie
