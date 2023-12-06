@@ -7,12 +7,15 @@ Created on Mon Nov 27 15:09:57 2023
 
 import sys
 import time
+import src.abaqus_utils
 
 # Le path de python certaines distrib abaqus a l'air de ne pas contenir 
 # le dossier qui contient le script en train d'etre execute... 
 # donc on l'ajoute manuellement.
 
-folder = "C://temp/2020-1214/AbaqusLayupOptimizer" #mamouret
+
+folder = "C://temp/AbaqusLayupOptimizer" #peridon
+# folder = "C://temp/2020-1214/AbaqusLayupOptimizer" #mamouret
 # folder = "C://temp/2020-1227/AbaqusLayupOptimizer" #esposito
 # folder = "C://temp/2021-1061/AbaqusLayupOptimizer" #guilloux
 # folder = "C://temp/2021-0606/AbaqusLayupOptimizer" #liber
@@ -54,15 +57,14 @@ my_model = models[model_name]
 my_part = my_model.parts[part_name]
 my_material = 'composite'
 
-# Un compositeLayupe est deja cree sur le modele
-composite_layup = my_part.compositeLayups['CompositeLayup']
-#region = my_part.sets['Set-1']
 
+my_data = np.genfromtxt('output_array.csv', delimiter=',')
 
-my_data = np.genfromtxt('Z:/Mes Documents/constitution-dataset-proprietes-pli/output_array.csv', delimiter=',')
-properties_to_insert = my_data[4]
-print('salss')
+for i in range(len(my_data)):
+    properties_to_insert = my_data[i]
 
-table = (my_data[4][0], properties_to_insert[1], 0.34, properties_to_insert[2], properties_to_insert[2], properties_to_insert[2])
-# E1, E2, Nu12, G12, G13, G23
-my_model.materials[my_material].elastic.setValues(table=(table, ))
+    table = (properties_to_insert[4][0], properties_to_insert[1], 0.34, properties_to_insert[2], properties_to_insert[2], properties_to_insert[2])
+    # E1, E2, Nu12, G12, G13, G23
+    my_model.materials[my_material].elastic.setValues(table=(table, ))
+    src.abaqus_utils.submit_job("combinaison_"+ str(i), my_model)
+    print(i)
