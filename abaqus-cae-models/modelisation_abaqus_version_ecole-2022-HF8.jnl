@@ -1,0 +1,157 @@
+# Save by 2020-1214 on 2023_11_22-10.45.45; build 2022.HF8 2023_03_27-08.24.44 RELr424 176957
+from abaqus import *
+upgradeMdb(
+    'C:/temp/2020-1214/AbaqusLayupOptimizer/modelisation_abaqus_version_ecole-2021.cae'
+    , 
+    'C:/temp/2020-1214/AbaqusLayupOptimizer/modelisation_abaqus_version_ecole.cae')
+# Save by 2020-1214 on 2023_11_22-10.45.45; build 2022.HF8 2023_03_27-08.24.44 RELr424 176957
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['3_tube'].parts['tube'].compositeLayups['CompositeLayup'].deletePlies(
+    )
+mdb.models['3_tube'].parts['tube'].compositeLayups['CompositeLayup'].resume()
+mdb.models['3_tube'].parts['tube'].compositeLayups['CompositeLayup'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='composite', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=90.0, plyName='Ply-1', region=
+    mdb.models['3_tube'].parts['tube'].sets['Set-1'], suppressed=False, 
+    thickness=0.25, thicknessType=SPECIFY_THICKNESS)
+mdb.models['3_tube'].parts['tube'].compositeLayups['CompositeLayup'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='composite', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=0.0, plyName='Ply-2', region=
+    mdb.models['3_tube'].parts['tube'].sets['Set-1'], suppressed=False, 
+    thickness=0.25, thicknessType=SPECIFY_THICKNESS)
+mdb.models['3_tube'].parts['tube'].compositeLayups['CompositeLayup'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='composite', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=45.0, plyName='Ply-3', region=
+    mdb.models['3_tube'].parts['tube'].sets['Set-1'], suppressed=False, 
+    thickness=0.25, thicknessType=SPECIFY_THICKNESS)
+mdb.models['3_tube'].parts['tube'].compositeLayups['CompositeLayup'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='composite', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=0.0, plyName='Ply-4', region=
+    mdb.models['3_tube'].parts['tube'].sets['Set-1'], suppressed=False, 
+    thickness=0.25, thicknessType=SPECIFY_THICKNESS)
+mdb.models['3_tube'].parts['tube'].compositeLayups['CompositeLayup'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='composite', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=90.0, plyName='Ply-5', region=
+    mdb.models['3_tube'].parts['tube'].sets['Set-1'], suppressed=False, 
+    thickness=0.25, thicknessType=SPECIFY_THICKNESS)
+mdb.models['3_tube'].parts['tube'].compositeLayups['CompositeLayup'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='composite', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=90.0, plyName='Ply-6', region=
+    mdb.models['3_tube'].parts['tube'].sets['Set-1'], suppressed=False, 
+    thickness=0.25, thicknessType=SPECIFY_THICKNESS)
+mdb.models['3_tube'].parts['tube'].compositeLayups['CompositeLayup'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='composite', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=45.0, plyName='Ply-7', region=
+    mdb.models['3_tube'].parts['tube'].sets['Set-1'], suppressed=False, 
+    thickness=0.25, thicknessType=SPECIFY_THICKNESS)
+mdb.models['3_tube'].parts['tube'].compositeLayups['CompositeLayup'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='composite', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=45.0, plyName='Ply-8', region=
+    mdb.models['3_tube'].parts['tube'].sets['Set-1'], suppressed=False, 
+    thickness=0.25, thicknessType=SPECIFY_THICKNESS)
+mdb.models['3_tube'].parts['tube'].compositeLayups['CompositeLayup'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='composite', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=45.0, plyName='Ply-9', region=
+    mdb.models['3_tube'].parts['tube'].sets['Set-1'], suppressed=False, 
+    thickness=0.25, thicknessType=SPECIFY_THICKNESS)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=False, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model=mdb.models['3_tube'], modelPrint=
+    OFF, multiprocessingMode=DEFAULT, name='job_automated_0', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, queue=None, 
+    resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=
+    0, waitMinutes=0)
+mdb.jobs['job_automated_0'].submit(consistencyChecking=OFF)
+mdb.jobs['job_automated_0'].waitForCompletion()
+mdb.models['3_tube'].parts['tube'].compositeLayups['CompositeLayup'].deletePlies(
+    )
+mdb.models['3_tube'].parts['tube'].compositeLayups['CompositeLayup'].resume()
+mdb.models['3_tube'].parts['tube'].compositeLayups['CompositeLayup'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='composite', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=90.0, plyName='Ply-1', region=
+    mdb.models['3_tube'].parts['tube'].sets['Set-1'], suppressed=False, 
+    thickness=0.25, thicknessType=SPECIFY_THICKNESS)
+mdb.models['3_tube'].parts['tube'].compositeLayups['CompositeLayup'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='composite', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=0.0, plyName='Ply-2', region=
+    mdb.models['3_tube'].parts['tube'].sets['Set-1'], suppressed=False, 
+    thickness=0.25, thicknessType=SPECIFY_THICKNESS)
+mdb.models['3_tube'].parts['tube'].compositeLayups['CompositeLayup'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='composite', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=45.0, plyName='Ply-3', region=
+    mdb.models['3_tube'].parts['tube'].sets['Set-1'], suppressed=False, 
+    thickness=0.25, thicknessType=SPECIFY_THICKNESS)
+mdb.models['3_tube'].parts['tube'].compositeLayups['CompositeLayup'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='composite', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=0.0, plyName='Ply-4', region=
+    mdb.models['3_tube'].parts['tube'].sets['Set-1'], suppressed=False, 
+    thickness=0.25, thicknessType=SPECIFY_THICKNESS)
+mdb.models['3_tube'].parts['tube'].compositeLayups['CompositeLayup'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='composite', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=90.0, plyName='Ply-5', region=
+    mdb.models['3_tube'].parts['tube'].sets['Set-1'], suppressed=False, 
+    thickness=0.25, thicknessType=SPECIFY_THICKNESS)
+mdb.models['3_tube'].parts['tube'].compositeLayups['CompositeLayup'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='composite', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=90.0, plyName='Ply-6', region=
+    mdb.models['3_tube'].parts['tube'].sets['Set-1'], suppressed=False, 
+    thickness=0.25, thicknessType=SPECIFY_THICKNESS)
+mdb.models['3_tube'].parts['tube'].compositeLayups['CompositeLayup'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='composite', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=45.0, plyName='Ply-7', region=
+    mdb.models['3_tube'].parts['tube'].sets['Set-1'], suppressed=False, 
+    thickness=0.25, thicknessType=SPECIFY_THICKNESS)
+mdb.models['3_tube'].parts['tube'].compositeLayups['CompositeLayup'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='composite', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=45.0, plyName='Ply-8', region=
+    mdb.models['3_tube'].parts['tube'].sets['Set-1'], suppressed=False, 
+    thickness=0.25, thicknessType=SPECIFY_THICKNESS)
+mdb.models['3_tube'].parts['tube'].compositeLayups['CompositeLayup'].CompositePly(
+    additionalRotationField='', additionalRotationType=ROTATION_NONE, angle=0.0
+    , axis=AXIS_3, material='composite', numIntPoints=3, orientationType=
+    SPECIFY_ORIENT, orientationValue=45.0, plyName='Ply-9', region=
+    mdb.models['3_tube'].parts['tube'].sets['Set-1'], suppressed=False, 
+    thickness=0.25, thicknessType=SPECIFY_THICKNESS)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=False, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model=mdb.models['3_tube'], modelPrint=
+    OFF, multiprocessingMode=DEFAULT, name='job_automated_1', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, queue=None, 
+    resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=
+    0, waitMinutes=0)
+mdb.jobs['job_automated_1'].submit(consistencyChecking=OFF)
+mdb.jobs['job_automated_1'].waitForCompletion()
+mdb.models['3_tube'].fieldOutputRequests['F-Output-2'].setValues(
+    layupLocationMethod=SPECIFIED, outputAtPlyBottom=False, outputAtPlyMid=True
+    , outputAtPlyTop=False, variables=('CFAILURE', 'HSNFTCRT', 'HSNFCCRT', 
+    'HSNMTCRT', 'HSNMCCRT', 'STH'))
+# Save by 2020-1214 on 2023_11_22-11.21.11; build 2022.HF8 2023_03_27-08.24.44 RELr424 176957
