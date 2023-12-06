@@ -1,0 +1,20 @@
+# -*- coding: mbcs -*-
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['1_plaque_plane'].ConstrainedSketch(name='__edit__', objectToCopy=
+    mdb.models['1_plaque_plane'].parts['plaque_plane'].features['Shell planar-1'].sketch)
+mdb.models['1_plaque_plane'].parts['plaque_plane'].projectReferencesOntoSketch(
+    filter=COPLANAR_EDGES, sketch=
+    mdb.models['1_plaque_plane'].sketches['__edit__'], upToFeature=
+    mdb.models['1_plaque_plane'].parts['plaque_plane'].features['Shell planar-1'])
