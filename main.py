@@ -1,17 +1,5 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Nov 27 15:09:57 2023
-
-@author: 2021-1061
-"""
-
 import sys
 import time
-
-# Le path de python certaines distrib abaqus a l'air de ne pas contenir 
-# le dossier qui contient le script en train d'etre execute... 
-# donc on l'ajoute manuellement.
-
 
 folder = "C://temp/AbaqusLayupOptimizer" #peridon
 # folder = "C://temp/2020-1214/AbaqusLayupOptimizer" #mamouret
@@ -20,8 +8,11 @@ folder = "C://temp/AbaqusLayupOptimizer" #peridon
 # folder = "C://temp/2021-0606/AbaqusLayupOptimizer" #liber
 
 sys.path.append(folder)
+print(sys.path)
 
-import src.abaqus_utils
+
+
+import abaqus_utils
 import numpy as np
 import abaqus
 import csv
@@ -66,5 +57,5 @@ for i in range(len(my_data)):
     table = (properties_to_insert[4][0], properties_to_insert[1], 0.34, properties_to_insert[2], properties_to_insert[2], properties_to_insert[2])
     # E1, E2, Nu12, G12, G13, G23
     my_model.materials[my_material].elastic.setValues(table=(table, ))
-    src.abaqus_utils.submit_job("combinaison_"+ str(i), my_model)
+    abaqus_utils.submit_job("combinaison_"+ str(i), my_model)
     print(i)
