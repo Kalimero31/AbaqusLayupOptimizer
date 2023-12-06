@@ -7,7 +7,6 @@ Created on Mon Nov 27 15:09:57 2023
 
 import sys
 import time
-import src.abaqus_utils
 
 # Le path de python certaines distrib abaqus a l'air de ne pas contenir 
 # le dossier qui contient le script en train d'etre execute... 
@@ -22,6 +21,7 @@ folder = "C://temp/AbaqusLayupOptimizer" #peridon
 
 sys.path.append(folder)
 
+import src.abaqus_utils
 import numpy as np
 import abaqus
 import csv
