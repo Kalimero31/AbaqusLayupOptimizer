@@ -54,7 +54,7 @@ my_data = np.genfromtxt('C:/temp/AbaqusLayupOptimizer/output_array.csv', delimit
 for i in range(len(my_data)):
     properties_to_insert = my_data[i]
 
-    table = (properties_to_insert[4][0], properties_to_insert[1], 0.34, properties_to_insert[2], properties_to_insert[2], properties_to_insert[2])
+    table = (properties_to_insert[0], properties_to_insert[1], 0.34, properties_to_insert[2], properties_to_insert[2], properties_to_insert[2])
     # E1, E2, Nu12, G12, G13, G23
     my_model.materials[my_material].elastic.setValues(table=(table, ))
     abaqus_utils.submit_job("combinaison_"+ str(i), my_model)
