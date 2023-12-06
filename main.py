@@ -49,7 +49,7 @@ my_part = my_model.parts[part_name]
 my_material = 'composite'
 
 
-my_data = np.genfromtxt('output_array.csv', delimiter=',')
+my_data = np.genfromtxt('C:/temp/AbaqusLayupOptimizer/output_array.csv', delimiter=',')
 
 for i in range(len(my_data)):
     properties_to_insert = my_data[i]
