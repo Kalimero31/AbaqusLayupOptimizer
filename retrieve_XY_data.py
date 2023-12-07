@@ -17,7 +17,7 @@ step = odb.steps[nom_step]
 # for frame in step.frames:
 for frame in [step.frames[-1]]:
     for i in nodeIDs:
-        rf = frame.fieldOutputs['RF'].values[i]
+        rf = frame.fieldOutputs['RF'].values[i-1]
         print(rf.data[0])
 
 # Ferme l'ODB
