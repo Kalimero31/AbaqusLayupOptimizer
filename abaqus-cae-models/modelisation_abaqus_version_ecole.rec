@@ -1,0 +1,79 @@
+# -*- coding: mbcs -*-
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.jobs['test_rampe']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'clientHost': 'LAPTOP-GC4S6FM8', 'handle': 3876, 'jobName': 'test_rampe'})
+mdb.jobs['test_rampe']._Message(STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'test_rampe'})
+mdb.jobs['test_rampe']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 0, 'jobName': 'test_rampe'})
+mdb.jobs['test_rampe']._Message(MEMORY_ESTIMATE, {'phase': STANDARD_PHASE, 
+    'jobName': 'test_rampe', 'memory': 31.0})
+mdb.jobs['test_rampe']._Message(PHYSICAL_MEMORY, {'phase': STANDARD_PHASE, 
+    'physical_memory': 16081.0, 'jobName': 'test_rampe'})
+mdb.jobs['test_rampe']._Message(MINIMUM_MEMORY, {'minimum_memory': 20.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'test_rampe'})
+mdb.jobs['test_rampe']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 1, 'jobName': 'test_rampe'})
+mdb.jobs['test_rampe']._Message(STATUS, {'totalTime': 0.1, 'attempts': 1, 
+    'timeIncrement': 0.1, 'increment': 1, 'stepTime': 0.1, 'step': 1, 
+    'jobName': 'test_rampe', 'severe': 0, 'iterations': 1, 
+    'phase': STANDARD_PHASE, 'equilibrium': 1})
+mdb.jobs['test_rampe']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 2, 'jobName': 'test_rampe'})
+mdb.jobs['test_rampe']._Message(STATUS, {'totalTime': 0.2, 'attempts': 1, 
+    'timeIncrement': 0.1, 'increment': 2, 'stepTime': 0.2, 'step': 1, 
+    'jobName': 'test_rampe', 'severe': 0, 'iterations': 1, 
+    'phase': STANDARD_PHASE, 'equilibrium': 1})
+mdb.jobs['test_rampe']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 3, 'jobName': 'test_rampe'})
+mdb.jobs['test_rampe']._Message(STATUS, {'totalTime': 0.35, 'attempts': 1, 
+    'timeIncrement': 0.15, 'increment': 3, 'stepTime': 0.35, 'step': 1, 
+    'jobName': 'test_rampe', 'severe': 0, 'iterations': 1, 
+    'phase': STANDARD_PHASE, 'equilibrium': 1})
+mdb.jobs['test_rampe']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 4, 'jobName': 'test_rampe'})
+mdb.jobs['test_rampe']._Message(STATUS, {'totalTime': 0.575, 'attempts': 1, 
+    'timeIncrement': 0.225, 'increment': 4, 'stepTime': 0.575, 'step': 1, 
+    'jobName': 'test_rampe', 'severe': 0, 'iterations': 1, 
+    'phase': STANDARD_PHASE, 'equilibrium': 1})
+mdb.jobs['test_rampe']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 5, 'jobName': 'test_rampe'})
+mdb.jobs['test_rampe']._Message(STATUS, {'totalTime': 0.9125, 'attempts': 1, 
+    'timeIncrement': 0.3375, 'increment': 5, 'stepTime': 0.9125, 'step': 1, 
+    'jobName': 'test_rampe', 'severe': 0, 'iterations': 1, 
+    'phase': STANDARD_PHASE, 'equilibrium': 1})
+mdb.jobs['test_rampe']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 6, 'jobName': 'test_rampe'})
+mdb.jobs['test_rampe']._Message(STATUS, {'totalTime': 1.0, 'attempts': 1, 
+    'timeIncrement': 0.0874999999999999, 'increment': 6, 'stepTime': 1.0, 
+    'step': 1, 'jobName': 'test_rampe', 'severe': 0, 'iterations': 1, 
+    'phase': STANDARD_PHASE, 'equilibrium': 1})
+mdb.jobs['test_rampe']._Message(END_STEP, {'phase': STANDARD_PHASE, 
+    'stepId': 1, 'jobName': 'test_rampe'})
+mdb.jobs['test_rampe']._Message(COMPLETED, {'phase': STANDARD_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'test_rampe'})
+mdb.jobs['test_rampe']._Message(JOB_COMPLETED, {
+    'time': 'Wed Dec  6 13:52:50 2023', 'jobName': 'test_rampe'})
+mdb.models['1_plaque_plane'].materials['composite'].elastic.setValues(table=((
+    65660.0, 65660.0, 0.34, 3088.0, 3088.0, 3088.0), ))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=False, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model=mdb.models['1_plaque_plane'], 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='combinaison_0', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, queue=None, 
+    resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=
+    0, waitMinutes=0)
+mdb.jobs['combinaison_0'].submit(consistencyChecking=OFF)
+mdb.jobs['combinaison_0'].waitForCompletion()
