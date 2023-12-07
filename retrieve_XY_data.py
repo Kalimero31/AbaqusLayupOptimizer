@@ -16,9 +16,11 @@ nodeIDs = [5, 6, 45,46,47,48,49,50,51,52,53]
 step = odb.steps[nom_step]
 # for frame in step.frames:
 for frame in [step.frames[-1]]:
+    sum = 0
     for i in nodeIDs:
         rf = frame.fieldOutputs['RF'].values[i-1]
-        print(rf.data[0])
+        sum+= float(rf.data[0])
+    print(sum)
 
 # Ferme l'ODB
 odb.close()
