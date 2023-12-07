@@ -1,26 +1,28 @@
+import numpy as np
 import abaqus
 import abaqusConstants
 
-odb = abaqus.session.openOdb(name= "combinaison_48.odb")
+essais_de_tractions = np.zeros((49,37))
 
-# last_step = odb.steps.values()[-1]
-# last_frame = last_step.frames[-1]
-# print(last_frame.fieldOutputs)
-
-# Nom de la step
 nom_step = 'load'  # Remplace par le nom de ta step
 
-nodeIDs = [1,2,3,4,5,6,7,8,9]
-nodeIDs = [5, 6, 45,46,47,48,49,50,51,52,53]
+for i in range(10):
+    odb = abaqus.session.openOdb(name= "combinaison"+i+"48.odb")
 
-step = odb.steps[nom_step]
-# for frame in step.frames:
-for frame in [step.frames[-1]]:
-    sum = 0
-    for i in nodeIDs:
-        rf = frame.fieldOutputs['RF'].values[i-1]
-        sum+= float(rf.data[0])
-    print(sum)
 
-# Ferme l'ODB
-odb.close()
+    nodeIDs = [1,2,3,4,5,6,7,8,9]
+    nodeIDs = [5, 6, 45,46,47,48,49,50,51,52,53]
+
+    step = odb.steps[nom_step]
+
+    sum_steps = []
+    for j in range(len(step.frames)):
+        sum = 0
+        for i in nodeIDs:
+            rf = step.frames[i].fieldOutputs['RF'].values[i-1]
+            sum+= float(rf.data[0])
+        essais_de_tractions[i,j] = sum
+
+    odb.close()
+
+np.save("C://temp/essais_de_tractions.npy", essais_de_tractions)
