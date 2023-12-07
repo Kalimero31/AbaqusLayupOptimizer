@@ -10,8 +10,8 @@ odb = abaqus.session.openOdb(name= "combinaison_48.odb")
 # Nom de la step
 nom_step = 'load'  # Remplace par le nom de ta step
 
-nodeIDs = [5, 6, 45,46,47,48,49,50,51,52,53]
 nodeIDs = [1,2,3,4,5,6,7,8,9]
+nodeIDs = [5, 6, 45,46,47,48,49,50,51,52,53]
 
 step = odb.steps[nom_step]
 # for frame in step.frames:
