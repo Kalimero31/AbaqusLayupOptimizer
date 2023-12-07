@@ -1,0 +1,508 @@
+# -*- coding: mbcs -*-
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+del mdb.jobs['Job-240']
+del mdb.jobs['a']
+del mdb.jobs['a240']
+del mdb.jobs['test_rampe']
+mdb.models['1_plaque_plane'].materials['composite'].elastic.setValues(table=((
+    65660.0, 65660.0, 0.34, 3088.0, 3088.0, 3088.0), ))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=False, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model=mdb.models['1_plaque_plane'], 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='combinaison_0', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, queue=None, 
+    resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=
+    0, waitMinutes=0)
+mdb.jobs['combinaison_0'].submit(consistencyChecking=OFF)
+mdb.models['1_plaque_plane'].materials['composite'].elastic.setValues(table=((
+    65660.0, 65660.0, 0.34, 3529.0, 3529.0, 3529.0), ))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=False, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model=mdb.models['1_plaque_plane'], 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='combinaison_1', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, queue=None, 
+    resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=
+    0, waitMinutes=0)
+mdb.jobs['combinaison_1'].submit(consistencyChecking=OFF)
+mdb.models['1_plaque_plane'].materials['composite'].elastic.setValues(table=((
+    65660.0, 65660.0, 0.34, 3971.0, 3971.0, 3971.0), ))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=False, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model=mdb.models['1_plaque_plane'], 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='combinaison_2', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, queue=None, 
+    resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=
+    0, waitMinutes=0)
+mdb.jobs['combinaison_2'].submit(consistencyChecking=OFF)
+mdb.models['1_plaque_plane'].materials['composite'].elastic.setValues(table=((
+    65660.0, 65660.0, 0.34, 4412.0, 4412.0, 4412.0), ))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=False, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model=mdb.models['1_plaque_plane'], 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='combinaison_3', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, queue=None, 
+    resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=
+    0, waitMinutes=0)
+mdb.jobs['combinaison_3'].submit(consistencyChecking=OFF)
+mdb.models['1_plaque_plane'].materials['composite'].elastic.setValues(table=((
+    65660.0, 65660.0, 0.34, 4853.0, 4853.0, 4853.0), ))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=False, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model=mdb.models['1_plaque_plane'], 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='combinaison_4', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, queue=None, 
+    resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=
+    0, waitMinutes=0)
+mdb.jobs['combinaison_4'].submit(consistencyChecking=OFF)
+mdb.models['1_plaque_plane'].materials['composite'].elastic.setValues(table=((
+    65660.0, 65660.0, 0.34, 5294.0, 5294.0, 5294.0), ))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=False, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model=mdb.models['1_plaque_plane'], 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='combinaison_5', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, queue=None, 
+    resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=
+    0, waitMinutes=0)
+mdb.jobs['combinaison_5'].submit(consistencyChecking=OFF)
+mdb.models['1_plaque_plane'].materials['composite'].elastic.setValues(table=((
+    65660.0, 65660.0, 0.34, 5735.0, 5735.0, 5735.0), ))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=False, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model=mdb.models['1_plaque_plane'], 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='combinaison_6', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, queue=None, 
+    resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=
+    0, waitMinutes=0)
+mdb.jobs['combinaison_6'].submit(consistencyChecking=OFF)
+mdb.models['1_plaque_plane'].materials['composite'].elastic.setValues(table=((
+    75040.0, 75040.0, 0.34, 3088.0, 3088.0, 3088.0), ))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=False, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model=mdb.models['1_plaque_plane'], 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='combinaison_7', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, queue=None, 
+    resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=
+    0, waitMinutes=0)
+mdb.jobs['combinaison_7'].submit(consistencyChecking=OFF)
+mdb.models['1_plaque_plane'].materials['composite'].elastic.setValues(table=((
+    75040.0, 75040.0, 0.34, 3529.0, 3529.0, 3529.0), ))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=False, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model=mdb.models['1_plaque_plane'], 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='combinaison_8', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, queue=None, 
+    resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=
+    0, waitMinutes=0)
+mdb.jobs['combinaison_8'].submit(consistencyChecking=OFF)
+mdb.models['1_plaque_plane'].materials['composite'].elastic.setValues(table=((
+    75040.0, 75040.0, 0.34, 3971.0, 3971.0, 3971.0), ))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=False, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model=mdb.models['1_plaque_plane'], 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='combinaison_9', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, queue=None, 
+    resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=
+    0, waitMinutes=0)
+mdb.jobs['combinaison_9'].submit(consistencyChecking=OFF)
+mdb.models['1_plaque_plane'].materials['composite'].elastic.setValues(table=((
+    75040.0, 75040.0, 0.34, 4412.0, 4412.0, 4412.0), ))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=False, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model=mdb.models['1_plaque_plane'], 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='combinaison_10', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, queue=None, 
+    resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=
+    0, waitMinutes=0)
+mdb.jobs['combinaison_10'].submit(consistencyChecking=OFF)
+mdb.models['1_plaque_plane'].materials['composite'].elastic.setValues(table=((
+    75040.0, 75040.0, 0.34, 4853.0, 4853.0, 4853.0), ))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=False, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model=mdb.models['1_plaque_plane'], 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='combinaison_11', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, queue=None, 
+    resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=
+    0, waitMinutes=0)
+mdb.jobs['combinaison_11'].submit(consistencyChecking=OFF)
+mdb.models['1_plaque_plane'].materials['composite'].elastic.setValues(table=((
+    75040.0, 75040.0, 0.34, 5294.0, 5294.0, 5294.0), ))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=False, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model=mdb.models['1_plaque_plane'], 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='combinaison_12', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, queue=None, 
+    resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=
+    0, waitMinutes=0)
+mdb.jobs['combinaison_12'].submit(consistencyChecking=OFF)
+mdb.models['1_plaque_plane'].materials['composite'].elastic.setValues(table=((
+    75040.0, 75040.0, 0.34, 5735.0, 5735.0, 5735.0), ))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=False, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model=mdb.models['1_plaque_plane'], 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='combinaison_13', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, queue=None, 
+    resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=
+    0, waitMinutes=0)
+mdb.jobs['combinaison_13'].submit(consistencyChecking=OFF)
+mdb.models['1_plaque_plane'].materials['composite'].elastic.setValues(table=((
+    84420.0, 84420.0, 0.34, 3088.0, 3088.0, 3088.0), ))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=False, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model=mdb.models['1_plaque_plane'], 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='combinaison_14', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, queue=None, 
+    resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=
+    0, waitMinutes=0)
+mdb.jobs['combinaison_14'].submit(consistencyChecking=OFF)
+mdb.models['1_plaque_plane'].materials['composite'].elastic.setValues(table=((
+    84420.0, 84420.0, 0.34, 3529.0, 3529.0, 3529.0), ))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=False, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model=mdb.models['1_plaque_plane'], 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='combinaison_15', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, queue=None, 
+    resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=
+    0, waitMinutes=0)
+mdb.jobs['combinaison_15'].submit(consistencyChecking=OFF)
+mdb.models['1_plaque_plane'].materials['composite'].elastic.setValues(table=((
+    84420.0, 84420.0, 0.34, 3971.0, 3971.0, 3971.0), ))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=False, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model=mdb.models['1_plaque_plane'], 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='combinaison_16', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, queue=None, 
+    resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=
+    0, waitMinutes=0)
+mdb.jobs['combinaison_16'].submit(consistencyChecking=OFF)
+mdb.models['1_plaque_plane'].materials['composite'].elastic.setValues(table=((
+    84420.0, 84420.0, 0.34, 4412.0, 4412.0, 4412.0), ))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=False, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model=mdb.models['1_plaque_plane'], 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='combinaison_17', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, queue=None, 
+    resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=
+    0, waitMinutes=0)
+mdb.jobs['combinaison_17'].submit(consistencyChecking=OFF)
+mdb.models['1_plaque_plane'].materials['composite'].elastic.setValues(table=((
+    84420.0, 84420.0, 0.34, 4853.0, 4853.0, 4853.0), ))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=False, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model=mdb.models['1_plaque_plane'], 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='combinaison_18', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, queue=None, 
+    resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=
+    0, waitMinutes=0)
+mdb.jobs['combinaison_18'].submit(consistencyChecking=OFF)
+mdb.models['1_plaque_plane'].materials['composite'].elastic.setValues(table=((
+    84420.0, 84420.0, 0.34, 5294.0, 5294.0, 5294.0), ))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=False, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model=mdb.models['1_plaque_plane'], 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='combinaison_19', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, queue=None, 
+    resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=
+    0, waitMinutes=0)
+mdb.jobs['combinaison_19'].submit(consistencyChecking=OFF)
+mdb.models['1_plaque_plane'].materials['composite'].elastic.setValues(table=((
+    84420.0, 84420.0, 0.34, 5735.0, 5735.0, 5735.0), ))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=False, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model=mdb.models['1_plaque_plane'], 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='combinaison_20', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, queue=None, 
+    resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=
+    0, waitMinutes=0)
+mdb.jobs['combinaison_20'].submit(consistencyChecking=OFF)
+mdb.models['1_plaque_plane'].materials['composite'].elastic.setValues(table=((
+    93800.0, 93800.0, 0.34, 3088.0, 3088.0, 3088.0), ))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=False, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model=mdb.models['1_plaque_plane'], 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='combinaison_21', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, queue=None, 
+    resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=
+    0, waitMinutes=0)
+mdb.jobs['combinaison_21'].submit(consistencyChecking=OFF)
+mdb.models['1_plaque_plane'].materials['composite'].elastic.setValues(table=((
+    93800.0, 93800.0, 0.34, 3529.0, 3529.0, 3529.0), ))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=False, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model=mdb.models['1_plaque_plane'], 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='combinaison_22', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, queue=None, 
+    resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=
+    0, waitMinutes=0)
+mdb.jobs['combinaison_22'].submit(consistencyChecking=OFF)
+mdb.models['1_plaque_plane'].materials['composite'].elastic.setValues(table=((
+    93800.0, 93800.0, 0.34, 3971.0, 3971.0, 3971.0), ))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=False, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model=mdb.models['1_plaque_plane'], 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='combinaison_23', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, queue=None, 
+    resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=
+    0, waitMinutes=0)
+mdb.jobs['combinaison_23'].submit(consistencyChecking=OFF)
+mdb.models['1_plaque_plane'].materials['composite'].elastic.setValues(table=((
+    93800.0, 93800.0, 0.34, 4412.0, 4412.0, 4412.0), ))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=False, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model=mdb.models['1_plaque_plane'], 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='combinaison_24', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, queue=None, 
+    resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=
+    0, waitMinutes=0)
+mdb.jobs['combinaison_24'].submit(consistencyChecking=OFF)
+mdb.models['1_plaque_plane'].materials['composite'].elastic.setValues(table=((
+    93800.0, 93800.0, 0.34, 4853.0, 4853.0, 4853.0), ))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=False, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model=mdb.models['1_plaque_plane'], 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='combinaison_25', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, queue=None, 
+    resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=
+    0, waitMinutes=0)
+mdb.jobs['combinaison_25'].submit(consistencyChecking=OFF)
+mdb.models['1_plaque_plane'].materials['composite'].elastic.setValues(table=((
+    93800.0, 93800.0, 0.34, 5294.0, 5294.0, 5294.0), ))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=False, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model=mdb.models['1_plaque_plane'], 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='combinaison_26', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, queue=None, 
+    resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=
+    0, waitMinutes=0)
+mdb.jobs['combinaison_26'].submit(consistencyChecking=OFF)
+mdb.models['1_plaque_plane'].materials['composite'].elastic.setValues(table=((
+    93800.0, 93800.0, 0.34, 5735.0, 5735.0, 5735.0), ))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=False, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model=mdb.models['1_plaque_plane'], 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='combinaison_27', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, queue=None, 
+    resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=
+    0, waitMinutes=0)
+mdb.jobs['combinaison_27'].submit(consistencyChecking=OFF)
+mdb.models['1_plaque_plane'].materials['composite'].elastic.setValues(table=((
+    103180.0, 103180.0, 0.34, 3088.0, 3088.0, 3088.0), ))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=False, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model=mdb.models['1_plaque_plane'], 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='combinaison_28', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, queue=None, 
+    resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=
+    0, waitMinutes=0)
+mdb.jobs['combinaison_28'].submit(consistencyChecking=OFF)
+mdb.models['1_plaque_plane'].materials['composite'].elastic.setValues(table=((
+    103180.0, 103180.0, 0.34, 3529.0, 3529.0, 3529.0), ))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=False, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model=mdb.models['1_plaque_plane'], 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='combinaison_29', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, queue=None, 
+    resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=
+    0, waitMinutes=0)
+mdb.jobs['combinaison_29'].submit(consistencyChecking=OFF)
+mdb.models['1_plaque_plane'].materials['composite'].elastic.setValues(table=((
+    103180.0, 103180.0, 0.34, 3971.0, 3971.0, 3971.0), ))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=False, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model=mdb.models['1_plaque_plane'], 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='combinaison_30', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, queue=None, 
+    resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=
+    0, waitMinutes=0)
+mdb.jobs['combinaison_30'].submit(consistencyChecking=OFF)
+mdb.models['1_plaque_plane'].materials['composite'].elastic.setValues(table=((
+    103180.0, 103180.0, 0.34, 4412.0, 4412.0, 4412.0), ))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=False, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model=mdb.models['1_plaque_plane'], 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='combinaison_31', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, queue=None, 
+    resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=
+    0, waitMinutes=0)
+mdb.jobs['combinaison_31'].submit(consistencyChecking=OFF)
+mdb.models['1_plaque_plane'].materials['composite'].elastic.setValues(table=((
+    103180.0, 103180.0, 0.34, 4853.0, 4853.0, 4853.0), ))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=False, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model=mdb.models['1_plaque_plane'], 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='combinaison_32', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, queue=None, 
+    resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=
+    0, waitMinutes=0)
+mdb.jobs['combinaison_32'].submit(consistencyChecking=OFF)
+mdb.models['1_plaque_plane'].materials['composite'].elastic.setValues(table=((
+    103180.0, 103180.0, 0.34, 5294.0, 5294.0, 5294.0), ))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=False, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model=mdb.models['1_plaque_plane'], 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='combinaison_33', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, queue=None, 
+    resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=
+    0, waitMinutes=0)
+mdb.jobs['combinaison_33'].submit(consistencyChecking=OFF)
+mdb.models['1_plaque_plane'].materials['composite'].elastic.setValues(table=((
+    103180.0, 103180.0, 0.34, 5735.0, 5735.0, 5735.0), ))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=False, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model=mdb.models['1_plaque_plane'], 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='combinaison_34', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, queue=None, 
+    resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=
+    0, waitMinutes=0)
+mdb.jobs['combinaison_34'].submit(consistencyChecking=OFF)
+mdb.models['1_plaque_plane'].materials['composite'].elastic.setValues(table=((
+    112560.0, 112560.0, 0.34, 3088.0, 3088.0, 3088.0), ))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=False, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model=mdb.models['1_plaque_plane'], 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='combinaison_35', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, queue=None, 
+    resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=
+    0, waitMinutes=0)
+mdb.jobs['combinaison_35'].submit(consistencyChecking=OFF)
+mdb.models['1_plaque_plane'].materials['composite'].elastic.setValues(table=((
+    112560.0, 112560.0, 0.34, 3529.0, 3529.0, 3529.0), ))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=False, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model=mdb.models['1_plaque_plane'], 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='combinaison_36', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, queue=None, 
+    resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=
+    0, waitMinutes=0)
+mdb.jobs['combinaison_36'].submit(consistencyChecking=OFF)
+mdb.models['1_plaque_plane'].materials['composite'].elastic.setValues(table=((
+    112560.0, 112560.0, 0.34, 3971.0, 3971.0, 3971.0), ))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=False, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model=mdb.models['1_plaque_plane'], 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='combinaison_37', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, queue=None, 
+    resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=
+    0, waitMinutes=0)
+mdb.jobs['combinaison_37'].submit(consistencyChecking=OFF)
+mdb.models['1_plaque_plane'].materials['composite'].elastic.setValues(table=((
+    112560.0, 112560.0, 0.34, 4412.0, 4412.0, 4412.0), ))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=False, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model=mdb.models['1_plaque_plane'], 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='combinaison_38', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, queue=None, 
+    resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=
+    0, waitMinutes=0)
+mdb.jobs['combinaison_38'].submit(consistencyChecking=OFF)
+mdb.models['1_plaque_plane'].materials['composite'].elastic.setValues(table=((
+    112560.0, 112560.0, 0.34, 4853.0, 4853.0, 4853.0), ))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=False, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model=mdb.models['1_plaque_plane'], 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='combinaison_39', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, queue=None, 
+    resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=
+    0, waitMinutes=0)
+mdb.jobs['combinaison_39'].submit(consistencyChecking=OFF)
+mdb.models['1_plaque_plane'].materials['composite'].elastic.setValues(table=((
+    112560.0, 112560.0, 0.34, 5294.0, 5294.0, 5294.0), ))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=False, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model=mdb.models['1_plaque_plane'], 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='combinaison_40', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, queue=None, 
+    resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=
+    0, waitMinutes=0)
+mdb.jobs['combinaison_40'].submit(consistencyChecking=OFF)
+mdb.models['1_plaque_plane'].materials['composite'].elastic.setValues(table=((
+    112560.0, 112560.0, 0.34, 5735.0, 5735.0, 5735.0), ))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=False, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model=mdb.models['1_plaque_plane'], 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='combinaison_41', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, queue=None, 
+    resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=
+    0, waitMinutes=0)
+mdb.jobs['combinaison_41'].submit(consistencyChecking=OFF)
+mdb.models['1_plaque_plane'].materials['composite'].elastic.setValues(table=((
+    121940.0, 121940.0, 0.34, 3088.0, 3088.0, 3088.0), ))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=False, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model=mdb.models['1_plaque_plane'], 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='combinaison_42', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, queue=None, 
+    resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=
+    0, waitMinutes=0)
+mdb.jobs['combinaison_42'].submit(consistencyChecking=OFF)
+mdb.models['1_plaque_plane'].materials['composite'].elastic.setValues(table=((
+    121940.0, 121940.0, 0.34, 3529.0, 3529.0, 3529.0), ))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=False, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model=mdb.models['1_plaque_plane'], 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='combinaison_43', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, queue=None, 
+    resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=
+    0, waitMinutes=0)
+mdb.jobs['combinaison_43'].submit(consistencyChecking=OFF)
+mdb.models['1_plaque_plane'].materials['composite'].elastic.setValues(table=((
+    121940.0, 121940.0, 0.34, 3971.0, 3971.0, 3971.0), ))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=False, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model=mdb.models['1_plaque_plane'], 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='combinaison_44', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, queue=None, 
+    resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=
+    0, waitMinutes=0)
+mdb.jobs['combinaison_44'].submit(consistencyChecking=OFF)
+mdb.models['1_plaque_plane'].materials['composite'].elastic.setValues(table=((
+    121940.0, 121940.0, 0.34, 4412.0, 4412.0, 4412.0), ))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=False, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model=mdb.models['1_plaque_plane'], 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='combinaison_45', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, queue=None, 
+    resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=
+    0, waitMinutes=0)
+mdb.jobs['combinaison_45'].submit(consistencyChecking=OFF)
+mdb.models['1_plaque_plane'].materials['composite'].elastic.setValues(table=((
+    121940.0, 121940.0, 0.34, 4853.0, 4853.0, 4853.0), ))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=False, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model=mdb.models['1_plaque_plane'], 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='combinaison_46', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, queue=None, 
+    resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=
+    0, waitMinutes=0)
+mdb.jobs['combinaison_46'].submit(consistencyChecking=OFF)
+mdb.models['1_plaque_plane'].materials['composite'].elastic.setValues(table=((
+    121940.0, 121940.0, 0.34, 5294.0, 5294.0, 5294.0), ))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=False, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model=mdb.models['1_plaque_plane'], 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='combinaison_47', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, queue=None, 
+    resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=
+    0, waitMinutes=0)
+mdb.jobs['combinaison_47'].submit(consistencyChecking=OFF)
+mdb.models['1_plaque_plane'].materials['composite'].elastic.setValues(table=((
+    121940.0, 121940.0, 0.34, 5735.0, 5735.0, 5735.0), ))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=False, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model=mdb.models['1_plaque_plane'], 
+    modelPrint=OFF, multiprocessingMode=DEFAULT, name='combinaison_48', 
+    nodalOutputPrecision=SINGLE, numCpus=1, numGPUs=0, queue=None, 
+    resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=
+    0, waitMinutes=0)
+mdb.jobs['combinaison_48'].submit(consistencyChecking=OFF)
