@@ -16,7 +16,7 @@ for i in range(10):
     for j in range(len(step.frames)):
         sum = 0
         for k in nodeIDs:
-            rf = step.frames[i].fieldOutputs['RF'].values[k-1]
+            rf = step.frames[j].fieldOutputs['RF'].values[k-1]
             sum+= float(rf.data[0])
         essais_de_tractions[i,j] = sum
 
