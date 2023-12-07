@@ -75,8 +75,8 @@ def submit_job(job_name, model):
     abaqus.mdb.jobs[job_name].submit(consistencyChecking=abaqusConstants.OFF)
 
     # Waits the job is completed
-    abaqus.mdb.jobs[job_name].waitForCompletion()
-    time.sleep(1)
+    # abaqus.mdb.jobs[job_name].waitForCompletion()
+    time.sleep(70)
 
     # Moves .dat, .msg, .ipm, etc.. to the right folder
     move_data_file(job_name)
