@@ -7,6 +7,6 @@ print(edt.shape)
 
 print(edt)
 
-row0 = edt[1]
+row0 = edt[-1]
 plt.plot(row0)
 plt.show()
