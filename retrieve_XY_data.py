@@ -7,7 +7,7 @@ essais_de_tractions = np.zeros((49,37))
 nom_step = 'load'  # Remplace par le nom de ta step
 
 for i in range(10):
-    odb = abaqus.session.openOdb(name= "combinaison"+i+"48.odb")
+    odb = abaqus.session.openOdb(name= "combinaison"+str(i)+"48.odb")
 
 
     nodeIDs = [1,2,3,4,5,6,7,8,9]
