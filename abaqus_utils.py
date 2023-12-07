@@ -79,7 +79,7 @@ def submit_job(job_name, model):
     time.sleep(70)
 
     # Moves .dat, .msg, .ipm, etc.. to the right folder
-    move_data_file(job_name)
+    #move_data_file(job_name)
 
 # Move les fichiers autres que .odb dans un dossier pour eviter superflu.
 def move_data_file(job_name):
