@@ -13,16 +13,10 @@ nom_step = 'load'  # Remplace par le nom de ta step
 nodeID = 5
 
 step = odb.steps[nom_step]
-i=0
-for frame in step.frames:
-    i = i+1
-    try:
-        rf = frame.fieldOutputs['RF'].getSubset(region=odb.rootAssembly.nodeSets['ALL NODES']).values
-        for value in rf:
-            if value.nodeLabel == nodeID:
-                print(frame.frameId, value.data)
-    except KeyError:
-        print(i)
+# for frame in step.frames:
+frame = step.frames[-1]
+rf = frame.fieldOutputs['RF'].values
+print(rf)
 
 # Ferme l'ODB
 odb.close()
