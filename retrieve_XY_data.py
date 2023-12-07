@@ -21,7 +21,7 @@ for frame in step.frames:
             if value.nodeLabel == nodeID:
                 print(frame.frameId, value.data)
     except KeyError:
-        print(f'Frame {frame.frameId}: Pas de données RF disponibles')
+        print('Pas de data')
 
 # Ferme l'ODB
 odb.close()
