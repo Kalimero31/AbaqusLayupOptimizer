@@ -8,9 +8,6 @@ nom_step = 'load'  # Remplace par le nom de ta step
 
 for i in range(10):
     odb = abaqus.session.openOdb(name= "combinaison_"+str(i)+".odb")
-
-
-    nodeIDs = [1,2,3,4,5,6,7,8,9]
     nodeIDs = [5, 6, 45,46,47,48,49,50,51,52,53]
 
     step = odb.steps[nom_step]
@@ -18,7 +15,7 @@ for i in range(10):
     sum_steps = []
     for j in range(len(step.frames)):
         sum = 0
-        for i in nodeIDs:
+        for k in nodeIDs:
             rf = step.frames[i].fieldOutputs['RF'].values[i-1]
             sum+= float(rf.data[0])
         essais_de_tractions[i,j] = sum
