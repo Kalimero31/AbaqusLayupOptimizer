@@ -15,9 +15,10 @@ nodeID = 5
 step = odb.steps[nom_step]
 # for frame in step.frames:
 frame = step.frames[-1]
-rf = frame.fieldOutputs['RF'].values[0]
+rf = frame.fieldOutputs['RF'].values[nodeID]
 # rf = frame.fieldOutputs['RF'].values.magnitude
-print(dir(rf))
+print(rf.data)
+print(rf.elementLabel)
 
 # Ferme l'ODB
 odb.close()
