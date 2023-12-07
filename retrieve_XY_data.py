@@ -19,7 +19,7 @@ for frame in step.frames:
         rf = frame.fieldOutputs['RF'].getSubset(region=odb.rootAssembly.nodeSets['ALL NODES']).values
         for value in rf:
             if value.nodeLabel == nodeID:
-                print(f'Frame {frame.frameId}: RF = {value.data}')
+                print(frame.frameId, value.data)
     except KeyError:
         print(f'Frame {frame.frameId}: Pas de données RF disponibles')
 
